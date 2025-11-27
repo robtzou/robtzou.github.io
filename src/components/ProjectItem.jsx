@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectItem = ({ title, videoUrl, description, tags, sourceUrl, demoUrl }) => {
+const ProjectItem = ({ title, videoUrl, description, solution, tags, sourceUrl, demoUrl }) => {
     // Helper to extract YouTube ID if needed, or just use embed URL directly if provided
     const getEmbedUrl = (url) => {
         if (url.includes('youtube.com/watch?v=')) {
@@ -15,10 +15,10 @@ const ProjectItem = ({ title, videoUrl, description, tags, sourceUrl, demoUrl })
     };
 
     return (
-        <div className="flex flex-col md:flex-row gap-4 mb-4 bg-slate-50 p-4 rounded-xl shadow-sm transition-all duration-300 border border-slate-300">
+        <div className="flex flex-col md:flex-row gap-4 mb-6 bg-slate-50 p-4 rounded-xl shadow-sm transition-all duration-300 border border-slate-300">
 
-            <div className="w-full md:w-1/2 flex flex-col justify-center">
-                <h3 className="text-xl font-bold mb-2 text-slate-700">{title}</h3>
+            <div className="w-1/2 md:w-1/2 flex flex-col justify-center">
+                <h3 className="text-lg font-bold mb-2 text-slate-700">{title}</h3>
                 <div className="prose text-slate-500 leading-relaxed text-sm">
                     {description}
                 </div>
@@ -29,7 +29,7 @@ const ProjectItem = ({ title, videoUrl, description, tags, sourceUrl, demoUrl })
                         </span>
                     ))}
                 </div>
-                <div className="mt-2 flex gap-3">
+                <div className="mt- flex gap-3">
                     <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-slate-700 text-white rounded-lg text-sm font-semibold hover:bg-slate-600 transition-all shadow-md hover:shadow-lg flex items-center gap-2">
                         <span>Live Demo</span>
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
@@ -40,8 +40,8 @@ const ProjectItem = ({ title, videoUrl, description, tags, sourceUrl, demoUrl })
                     </a>
                 </div>
             </div>
-            <div className="w-full md:w-1/2">
-                <div className="aspect-video md:aspect-auto md:h-full rounded-lg overflow-hidden shadow-lg bg-black">
+            <div className="w-full md:w-1/2 flex flex-col">
+                <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-black mb-4">
                     <iframe
                         width="100%"
                         height="100%"
@@ -53,6 +53,7 @@ const ProjectItem = ({ title, videoUrl, description, tags, sourceUrl, demoUrl })
                         className="w-full h-full"
                     ></iframe>
                 </div>
+                {solution}
             </div>
         </div>
     );
