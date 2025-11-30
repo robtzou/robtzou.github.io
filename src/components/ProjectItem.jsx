@@ -17,7 +17,7 @@ const ProjectItem = ({ title, videoUrl, description, solution, tags, sourceUrl, 
     return (
         <div className="flex flex-col md:flex-row gap-4 mb-6 bg-slate-50 p-4 rounded-xl shadow-sm transition-all duration-300 border border-slate-300">
 
-            <div className="w-1/2 md:w-1/2 flex flex-col justify-center">
+            <div className="w-full md:w-1/2 flex flex-col justify-center">
                 <h3 className="text-lg font-bold mb-2 text-slate-700">{title}</h3>
                 <div className="prose text-slate-500 leading-relaxed text-sm">
                     {description}
