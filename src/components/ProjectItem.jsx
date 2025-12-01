@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ProjectItem = ({ title, videoUrl, description, solution, tags, sourceUrl, demoUrl }) => {
+const ProjectItem = ({ id, title, videoUrl, description, solution, tags, sourceUrl, demoUrl }) => {
     // Helper to extract YouTube ID if needed, or just use embed URL directly if provided
     const getEmbedUrl = (url) => {
         if (url.includes('youtube.com/watch?v=')) {
@@ -30,6 +31,10 @@ const ProjectItem = ({ title, videoUrl, description, solution, tags, sourceUrl, 
                     ))}
                 </div>
                 <div className="mt- flex gap-3">
+                    <Link to={`/projects/${id}`} className="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-semibold hover:bg-sky-500 transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                        <span>Read More</span>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                    </Link>
                     <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-slate-700 text-white rounded-lg text-sm font-semibold hover:bg-slate-600 transition-all shadow-md hover:shadow-lg flex items-center gap-2">
                         <span>Live Demo</span>
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>

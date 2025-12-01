@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from './components/Sidebar';
 import ProjectList from './components/ProjectList';
+import ProjectDetail from './components/ProjectDetail';
 
 import BlogList from './components/BlogList';
 
@@ -13,6 +14,7 @@ function App() {
       <main className="flex-1 p-8 md:p-12 lg:p-6 overflow-y-auto">
         <Routes>
           <Route path="/" element={<ProjectList />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/blog" element={<BlogList />} />
         </Routes>
       </main>
