@@ -8,16 +8,18 @@ export const projects = [
         description: (
             <>
                 <p className="mb-4">
-                    <strong className="text-gray-900"> Problem:</strong> Adding your classes to Google Calendar was a time-consuming process. Especially having to do it manually.
+                    <strong className="text-gray-900"><span>Situation:</span></strong> Students spent excessive time manually entering class schedules into Google Calendar each semester.
                 </p>
                 <p className="mb-4">
-                    <strong className="text-gray-900"> Idea:</strong> I designed a tool to automate the process of adding classes to Google Calendar via NLP and API calls. I used React for the frontend and Node.js for the backend.
+                    <strong className="text-gray-900">Task:</strong> Build a tool to automate course schedule imports to Google Calendar.
                 </p>
             </>
         ),
         solution: (
             <p className="mt-4 text-sm text-slate-500">
-                <strong className="text-gray-900"> Solution:</strong> A streamlined, responsive web application that reduced the time it took to add classes to Google Calendar by 80%, saving students valuable time.
+                <strong className="text-gray-900">Action:</strong> Developed a React/Node.js app using NLP to parse schedules and OAuth2.0 to sync with Google Calendar.
+                <br /><br />
+                <strong className="text-gray-900">Result:</strong> Reduced calendar setup time by 80%, saving students hours each semester.
             </p>
         ),
         tags: ["React", "Node.js", "Google Calendar API", "OAuth2.0"],
@@ -31,16 +33,18 @@ export const projects = [
         description: (
             <>
                 <p className="mb-4">
-                    <strong className="text-gray-900"> Problem:</strong> Managing inventory and reducing waste effectively is a challenge for food franchises. Without real-time data, it's hard to make proactive decisions to increase sales and minimize waste.
+                    <strong className="text-gray-900">Situation:</strong> Food franchises lacked real-time inventory visibility, leading to waste and missed sales opportunities.
                 </p>
                 <p className="mb-4">
-                    <strong className="text-gray-900"> Idea:</strong> I built a custom object detection model to identify and count donuts in real-time. This technology is designed to power proactive dashboards for franchise owners and customers.
+                    <strong className="text-gray-900">Task:</strong> Create a system to track donut inventory in real-time for proactive decision-making.
                 </p>
             </>
         ),
         solution: (
             <p className="mt-4 text-sm text-slate-500">
-                <strong className="text-gray-900"> Solution:</strong> A robust YOLOv11 model trained on a custom dataset of 2,000 augmented images in Google Colab. It handles various lighting conditions and angles, achieving a high mAP score for accurate real-time tracking.
+                <strong className="text-gray-900">Action:</strong> Trained a YOLOv11 model on 2,000 augmented images using Google Colab and Roboflow.
+                <br /><br />
+                <strong className="text-gray-900">Result:</strong> Achieved high mAP score with robust detection across varying lighting and angles.
             </p>
         ),
         tags: ["YOLOv11", "Computer Vision", "Python", "Google Colab", "Roboflow"],
@@ -54,16 +58,18 @@ export const projects = [
         description: (
             <>
                 <p className="mb-4">
-                    <strong className="text-gray-900"> Problem:</strong> Making the list isn't the hard part. Getting started is.
+                    <strong className="text-gray-900">Situation:</strong> Task paralysis made it difficult to start working despite having a to-do list.
                 </p>
                 <p className="mb-4">
-                    <strong className="text-gray-900"> Idea:</strong> Online I've seen many people use spinner wheels to gamify the process of getting started, but I wanted to create a more personalized experience.
+                    <strong className="text-gray-900">Task:</strong> Create a gamified experience to help users overcome procrastination.
                 </p>
             </>
         ),
         solution: (
             <p className="mt-4 text-sm text-slate-500">
-                <strong className="text-gray-900"> Solution:</strong> An application that uses a random spinner wheel to select a task to complete.
+                <strong className="text-gray-900">Action:</strong> Built a desktop app with React and Tauri featuring a spinner wheel for random task selection.
+                <br /><br />
+                <strong className="text-gray-900">Result:</strong> Delivered a lightweight, personalized productivity tool that removes decision fatigue.
             </p>
         ),
         tags: ["React", "Tauri", "HTML"],
@@ -77,16 +83,18 @@ export const projects = [
         description: (
             <>
                 <p className="mb-4">
-                    <strong className="text-gray-900"> Problem:</strong> 5 classes, 5 schedules, 5 due dates. It's a lot to juggle.
+                    <strong className="text-gray-900">Situation:</strong> Students juggle multiple syllabi with scattered deadlines and schedules.
                 </p>
-                <p className="mb-2">
-                    <strong className="text-gray-800"> Idea:</strong> The main process was finding out what questions needed to answered for the student experinece. In a 24 hour period, at HackUMBC 2025, I spearheaded a team of 2 to create SyllaScan.
+                <p className="mb-4">
+                    <strong className="text-gray-900">Task:</strong> Build an app to quickly extract and summarize key syllabus information.
                 </p>
             </>
         ),
         solution: (
             <p className="mt-4 text-sm text-slate-500">
-                <strong className="text-gray-900"> Solution:</strong> A user-friendly app that allowed users to scan their syllabus and summarize it in a matter of seconds.
+                <strong className="text-gray-900">Action:</strong> Led a 2-person team at HackUMBC 2024 to build a React/Flask app using Gemini API for parsing.
+                <br /><br />
+                <strong className="text-gray-900">Result:</strong> Enabled users to scan and summarize syllabi in seconds.
             </p>
         ),
         tags: ["React", "Gemini API", "Flask"],

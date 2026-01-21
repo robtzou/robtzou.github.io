@@ -90,7 +90,7 @@ const Sidebar = () => {
                         <div className="mb-2">
                             <div className="flex justify-between items-baseline">
                                 <h3 className="font-bold text-slate-200">Montgomery College</h3>
-                                <p className="text-xs text-slate-400 font-mono">2021 - 2024</p>
+                                <p className="text-xs text-slate-400 font-mono">2023 - 2024</p>
                             </div>
                             <p className="text-sm text-slate-400">A.A. General Studies</p>
                         </div>
@@ -99,11 +99,7 @@ const Sidebar = () => {
                     <section>
                         <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Experience</h2>
                         <div className="mb-2">
-                            <div className="flex justify-between items-baseline">
-                                <h3 className="font-bold text-slate-200">Handshake AI</h3>
-                                <p className="text-xs text-slate-400 font-mono">2025 - Present</p>
-                            </div>
-                            <p className="text-sm text-slate-400">ML Annotation Clerk</p>
+
                         </div>
                         <div className="mb-2">
                             <div className="flex justify-between items-baseline">
