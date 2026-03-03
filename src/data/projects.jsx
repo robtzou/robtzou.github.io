@@ -27,7 +27,7 @@ export const projects = [
         demoUrl: "https://course2cal.com"
     },
     {
-        id: 4,
+        id: 2,
         title: "Real-Time Donut Object Detection",
         videoUrl: "https://www.youtube.com/watch?v=OwYrSGb3ZCE",
         description: (
@@ -48,11 +48,11 @@ export const projects = [
             </p>
         ),
         tags: ["YOLOv11", "Computer Vision", "Python", "Google Colab", "Roboflow"],
-        sourceUrl: "",
-        demoUrl: ""
+        sourceUrl: "https://huggingface.co/datasets/robtzou/donuts",
+        demoUrl: "https://huggingface.co/spaces/robtzou/dunkinInventory"
     },
     {
-        id: 2,
+        id: 3,
         title: "To-do List App with random task generator",
         videoUrl: "https://www.youtube.com/watch?v=Gz3niQ5E98Q",
         description: (
@@ -77,7 +77,7 @@ export const projects = [
         demoUrl: "https://www.youtube.com/watch?v=Gz3niQ5E98Q"
     },
     {
-        id: 3,
+        id: 4,
         title: "SyllaScan",
         videoUrl: "https://www.youtube.com/watch?v=rEmNclLkUf8",
         description: (

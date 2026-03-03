@@ -4,6 +4,7 @@ import ProjectList from './components/ProjectList';
 import ProjectDetail from './components/ProjectDetail';
 
 import BlogList from './components/BlogList';
+import BlogDetail from './components/BlogDetail';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<ProjectList />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
         </Routes>
       </main>
     </div>
