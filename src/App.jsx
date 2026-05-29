@@ -1,25 +1,76 @@
-import React from 'react';
-import Sidebar from './components/Sidebar';
-import ProjectList from './components/ProjectList';
-import ProjectDetail from './components/ProjectDetail';
-
-import BlogList from './components/BlogList';
-import BlogDetail from './components/BlogDetail';
-
-import { Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import ContentCard from './components/ContentCard';
+import ProjectCarousel from './components/ProjectCarousel';
+import PostModal from './components/PostModal';
+import { projects } from './data/projects';
+import { posts } from './data/posts';
 
 function App() {
+  const [tab, setTab] = useState('projects');
+  const [activePost, setActivePost] = useState(null);
+
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-slate-200">
-      <Sidebar />
-      <main className="flex-1 p-8 md:p-12 lg:p-6 overflow-y-auto">
-        <Routes>
-          <Route path="/" element={<ProjectList />} />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
-          <Route path="/blog" element={<BlogList />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
-        </Routes>
+    <div className="min-h-screen bg-slate-50">
+      <Header />
+
+      {/* Tab toggle */}
+      <div className="max-w-3xl mx-auto px-6 mb-8">
+        <div className="flex justify-center">
+          <div className="inline-flex bg-slate-200/70 rounded-lg p-1">
+            <button
+              onClick={() => setTab('projects')}
+              className={`px-5 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                tab === 'projects'
+                  ? 'bg-white text-slate-800 shadow-sm'
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Projects
+            </button>
+            <button
+              onClick={() => setTab('blog')}
+              className={`px-5 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                tab === 'blog'
+                  ? 'bg-white text-slate-800 shadow-sm'
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Blog
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <main className="max-w-3xl mx-auto px-10 pb-16">
+        {tab === 'projects' ? (
+          <ProjectCarousel projects={projects} />
+        ) : (
+          <div className="grid gap-6 sm:grid-cols-2">
+            {posts.map((post) => (
+              <ContentCard
+                key={post.id}
+                item={post}
+                type="post"
+                onReadMore={setActivePost}
+              />
+            ))}
+          </div>
+        )}
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-200 py-8 text-center">
+        <p className="text-xs text-slate-400">
+          © {new Date().getFullYear()} Robert Tzou
+        </p>
+      </footer>
+
+      {/* Post modal */}
+      {activePost && (
+        <PostModal post={activePost} onClose={() => setActivePost(null)} />
+      )}
     </div>
   );
 }
