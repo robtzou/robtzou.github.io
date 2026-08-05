@@ -3,6 +3,7 @@ import Header from './components/Header';
 import ContentCard from './components/ContentCard';
 import ProjectCarousel from './components/ProjectCarousel';
 import PostModal from './components/PostModal';
+import AboutSection from './components/AboutSection';
 import { projects } from './data/projects';
 import { posts } from './data/posts';
 
@@ -29,6 +30,16 @@ function App() {
               Projects
             </button>
             <button
+              onClick={() => setTab('about')}
+              className={`px-5 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                tab === 'about'
+                  ? 'bg-white text-slate-800 shadow-sm'
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              About
+            </button>
+            <button
               onClick={() => setTab('blog')}
               className={`px-5 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                 tab === 'blog'
@@ -44,9 +55,9 @@ function App() {
 
       {/* Content */}
       <main className="max-w-3xl mx-auto px-10 pb-16">
-        {tab === 'projects' ? (
-          <ProjectCarousel projects={projects} />
-        ) : (
+        {tab === 'projects' && <ProjectCarousel projects={projects} />}
+        {tab === 'about' && <AboutSection />}
+        {tab === 'blog' && (
           <div className="grid gap-6 sm:grid-cols-2">
             {posts.map((post) => (
               <ContentCard

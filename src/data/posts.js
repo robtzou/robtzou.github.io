@@ -1,4 +1,26 @@
 export const posts = [
+
+  {
+    id: 1,
+    title: "[Part 1] Applying computer vision to residential gated communities",
+    date: "August 5, 2026",
+    preview:
+      "In this project, I explored using computer vision to enhance security and convenience in residential gated communities.",
+    category: "LPR",
+    readTime: "5 min read",
+    content: `The basis of the idea is that computer vision and the advancements made within YOLO models has reduced latency down to sub-second, making it a viable alternative to RFID tags and bluetooth systems that are currently used in residential gated communities.
+
+            The primary issue that I wanted to solve was the annoyance for residents to get out of their car to open the gate, or the inefficiency of having to wait for a gate to open for a vehicle or person that is not on a whitelist.
+
+            I also wanted to address the security concerns associated with simply buzzing people in without verification.
+
+            I started by surveying the current infrastructure of the community. There is one main entrance with a gate, and two other points of entry for residents only, one being on the other side of the main road and the other being a pedestrian gate. 
+
+            I decided to focus on the main entrance for the first iteration of this project, given the complexity of implementing a solution for the other gates.
+            
+            ACTION: Create a simulated environment to train models with annotated data of the gate environment.`,
+  },
+
   {
     id: 4,
     title: "Healthcare Data Analysis",
@@ -19,26 +41,7 @@ Visualization played a crucial role in communicating these findings. I built int
 
 The biggest takeaway from this project is that healthcare data analysis isn't just about building models — it's about building trust. Clinicians need to understand why a model makes a prediction before they'll act on it. Explainability isn't a nice-to-have; it's a requirement.`,
   },
-  {
-    id: 1,
-    title: "The Future of Web Development",
-    date: "November 15, 2025",
-    preview:
-      "As we move towards more AI-integrated workflows, the role of a web developer is evolving. Here's what I think the next 5 years will look like.",
-    category: "Industry",
-    readTime: "5 min read",
-    content: `The web development landscape is shifting faster than ever. In the past year alone, we've seen AI coding assistants go from novelty to necessity, component libraries become increasingly sophisticated, and the line between frontend and backend blur almost entirely. Here's what I think the next five years hold.
 
-First, the role of the "web developer" will split further. We'll see specialists in AI integration — people who understand how to wire up language models, manage context windows, and build intelligent interfaces — alongside traditional UI engineers who focus on design systems and accessibility. The generalist full-stack developer won't disappear, but the skill set will expand to include prompt engineering and agent orchestration.
-
-Second, I believe we'll see a significant shift toward server-first architectures. React Server Components, Astro's island architecture, and similar patterns are already proving that shipping less JavaScript to the client results in better user experiences. The pendulum swung hard toward client-side rendering in the 2010s, and it's swinging back — but this time with better tooling and a more nuanced understanding of when each approach makes sense.
-
-Third, the build toolchain will continue to simplify. Vite has already replaced Webpack for most new projects, and I expect we'll see further consolidation. The days of spending hours configuring bundlers are numbered. Tools will be fast by default, conventions will replace configuration, and developers will spend more time on product and less on plumbing.
-
-Finally, accessibility will become a first-class concern rather than an afterthought. Legal requirements are tightening globally, and companies are realizing that accessible design is simply good design. I expect major frameworks to ship with accessibility linting built in, and component libraries to make accessible patterns the path of least resistance.
-
-The developers who thrive in this environment will be the ones who stay curious, invest in fundamentals over frameworks, and embrace change as the only constant.`,
-  },
   {
     id: 2,
     title: "Why I Chose React for My Portfolio",
